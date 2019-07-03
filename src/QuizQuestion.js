@@ -6,14 +6,16 @@ class QuizQuestion extends Component{
     super(props)
     this.state = {incorrectAnswer: false}
   }
+
   handleClick(buttonText){
     if(buttonText === this.props.quiz_question.answer){
-      this.setState({inCorrectAnswer: false})
+      this.setState({incorrectAnswer: false})
       this.props.showNextQuestionHandler()
     } else {
-      this.setState({inCorrectAnswer: true})
+      this.setState({incorrectAnswer: true})
     }
   }
+
   render(){
     return(
       <main>
